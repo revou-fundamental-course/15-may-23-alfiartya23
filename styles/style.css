@@ -157,3 +157,66 @@ header p {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+/* Keliling Persegi */
+.keliling-persegi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.keliling-persegi span {
+  height: auto;
+  width: 1.2px;
+  margin: 0 24px;
+  background-color: #e5e5e5;
+}
+
+#input-sisi-keliling {
+  border: 1px solid #252525;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+
+#input-sisi-keliling:focus {
+  border: 1px solid #7c44e3;
+  outline: none;
+}
+
+.btn-hitung-keliling {
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: #7c44e3;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-reset-keliling {
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: rgb(237, 53, 87);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+}
+
+.output_keliling {
+  visibility: hidden;
+}
+
+.output_keliling .hasil-keliling {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  text-align: center;
+}
