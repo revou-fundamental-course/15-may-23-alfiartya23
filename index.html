@@ -19,13 +19,48 @@
 
     <main>
       <!-- Option Menu -->
-      <!-- Use autocomplete attribute and set to off, so the browser will not remember inside of the last input after reload the page -->
+      <!-- Use autocomplete attribute and set to off, so the browser will not remember last option that user choose when reload the page -->
       <div class="dropdown-menu">
         <select name="menu-rumus" class="list-menu" autocomplete="off">
           <option value="luas" selected>Luas Persegi</option>
           <option value="keliling">Keliling Persegi</option>
         </select>
         <p>Klik pada dropdown untuk mengubah rumus</p>
+      </div>
+
+      <!-- Luas Persegi -->
+      <div class="luas-persegi">
+        <div class="container">
+          <div class="description">
+            <h3 class="formula-title">Luas Persegi</h3>
+            <p>Rumus luas persegi yaitu:</p>
+            <ul>
+              <li>L = S x S</li>
+              <li>L = S<sup>2</sup></li>
+            </ul>
+            <p>Dimana:</p>
+            <ul>
+              <li>L = Luas</li>
+              <li>S = Sisi</li>
+            </ul>
+          </div>
+          <img src="./images/luas-persegi.png" class="image-persegi" alt="Gambar persegi" />
+        </div>
+        <span></span>
+        <div class="operation">
+          <div class="user-input">
+            <h3>Hitung Luas Persegi</h3>
+
+            <!-- With autocomplete atribute set to off, the input will not remember any number before -->
+            <input name="sisi-luas" id="input-sisi-luas" autocomplete="off" placeholder="Masukkan angka sisi" required />
+            <button name="hitung-luas" class="btn-hitung-luas">Hitung</button>
+            <button name="reset-luas" class="btn-reset-luas">Reset</button>
+          </div>
+          <div class="output_luas">
+            <p>Hasil luas persegi tersebut:</p>
+            <p class="hasil-luas"></p>
+          </div>
+        </div>
       </div>
     </main>
     <script src="script/script.js"></script>

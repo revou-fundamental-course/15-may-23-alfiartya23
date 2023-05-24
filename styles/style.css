@@ -53,3 +53,107 @@ header p {
 .dropdown-menu p {
   font-size: 0.9rem;
 }
+
+/* Luas Persegi */
+.luas-persegi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.luas-persegi span {
+  height: auto;
+  width: 1.2px;
+  margin: 0 24px;
+  background-color: #e5e5e5;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 55%;
+  /* gap: 24px; */
+  justify-content: space-between;
+}
+
+.image-persegi {
+  width: 200px;
+  height: 200px;
+}
+
+.description {
+  line-height: 24px;
+}
+
+.description p {
+  margin-top: 12px;
+}
+
+.description ul {
+  margin-top: 12px;
+}
+
+.list-menu {
+  padding: 6px 12px;
+}
+
+.btn-hitung-luas {
+  cursor: pointer;
+}
+
+.operation {
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 45%;
+  /* background-color: aquamarine; */
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#input-sisi-luas {
+  border: 1px solid #252525;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+
+#input-sisi-luas:focus {
+  border: 1px solid #7c44e3;
+  /* outline: none; */
+}
+
+.btn-hitung-luas {
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: #7c44e3;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-reset-luas {
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: rgb(237, 53, 87);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+}
+
+.output_luas {
+  visibility: hidden;
+}
+
+.output_luas .hasil-luas {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
