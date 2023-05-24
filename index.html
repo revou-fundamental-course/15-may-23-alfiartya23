@@ -8,6 +8,26 @@
     <title>Katik App</title>
   </head>
   <body>
+    <!-- Title -->
+    <header>
+      <h1 class="title-name">Katik <span>Kalkulator Matematik</span></h1>
+      <p>
+        Hi, selamat datang di Katik. <br />
+        Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar.
+      </p>
+    </header>
+
+    <main>
+      <!-- Option Menu -->
+      <!-- Use autocomplete attribute and set to off, so the browser will not remember inside of the last input after reload the page -->
+      <div class="dropdown-menu">
+        <select name="menu-rumus" class="list-menu" autocomplete="off">
+          <option value="luas" selected>Luas Persegi</option>
+          <option value="keliling">Keliling Persegi</option>
+        </select>
+        <p>Klik pada dropdown untuk mengubah rumus</p>
+      </div>
+    </main>
     <script src="script/script.js"></script>
   </body>
 </html>
