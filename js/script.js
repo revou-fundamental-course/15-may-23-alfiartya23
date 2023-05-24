@@ -39,8 +39,30 @@ btnHitungLuas.addEventListener("click", function () {
   }
 });
 
+// Handling Hitung Keliling button
+btnHitungKeliling.addEventListener("click", function () {
+  // Check if input is empty
+  if (inputNumberKeliling.value === "") {
+    alert("Input angka dulu ya");
+  } else {
+    const sisiPersegi = Number(inputNumberKeliling.value);
+
+    // Formula Keliling
+    const result = 4 * sisiPersegi;
+
+    document.querySelector(".output_keliling").style.visibility = "visible";
+    document.querySelector(".hasil-keliling").textContent = `K = ${result}`;
+  }
+});
+
 // Handling Reset Button Luas Persegi
 btnResetLuas.addEventListener("click", function () {
   inputNumberLuas.value = "";
   document.querySelector(".output_luas").style.visibility = "hidden";
+});
+
+// Handling Reset Button Luas Persegi
+btnResetKeliling.addEventListener("click", function () {
+  inputNumberKeliling.value = "";
+  document.querySelector(".output_keliling").style.visibility = "hidden";
 });

@@ -59,7 +59,7 @@ header p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .luas-persegi span {
@@ -83,7 +83,7 @@ header p {
 }
 
 .description {
-  line-height: 24px;
+  line-height: 20px;
 }
 
 .description p {
@@ -163,7 +163,7 @@ header p {
   display: none;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .keliling-persegi span {
@@ -219,4 +219,124 @@ footer {
   margin-top: 24px;
   font-size: 0.85rem;
   text-align: center;
+}
+
+/* Responsive Design */
+/* When the maximum width is 1024px and below will applied this rule*/
+@media (max-width: 1024px) {
+  body {
+    width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+/* When the maximum width is 768px and below will applied this rule*/
+@media (max-width: 768px) {
+  body {
+    width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dropdown-menu p {
+    font-size: 0.9rem;
+  }
+
+  .list-menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .luas-persegi {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .luas-persegi span {
+    height: 0.8px;
+    width: auto;
+    margin: 24px 0;
+    background-color: #e5e5e5;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .operation {
+    width: 100%;
+  }
+
+  .keliling-persegi {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .keliling-persegi span {
+    height: 0.8px;
+    width: auto;
+    margin: 24px 0;
+    background-color: #e5e5e5;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 90%;
+  }
+  body {
+    width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 80%;
+  }
+  body {
+    width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header p {
+    line-height: 20px;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    gap: 4px;
+  }
+
+  .formula-title {
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .description {
+    line-height: 20px;
+  }
+
+  .user-input {
+    text-align: center;
+  }
+
+  .image-persegi {
+    margin: 0 auto;
+  }
 }
