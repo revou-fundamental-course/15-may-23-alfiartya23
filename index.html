@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Katik App</title>
   </head>
   <body>
@@ -51,14 +52,19 @@
           <div class="user-input">
             <h3>Hitung Luas Persegi</h3>
 
-            <!-- With autocomplete atribute set to off, the input will not remember any number before -->
-            <input name="sisi-luas" id="input-sisi-luas" autocomplete="off" placeholder="Masukkan angka sisi" required />
-            <button name="hitung-luas" class="btn-hitung-luas">Hitung</button>
-            <button name="reset-luas" class="btn-reset-luas">Reset</button>
+            <form action="#" class="form">
+              <div class="form-container">
+                <input name="sisi-luas" id="input-sisi-luas" autocomplete="off" placeholder="Masukkan angka sisi" required />
+                <i class="alert-circle" data-feather="alert-circle"></i>
+                <small>Error Message</small>
+              </div>
+              <button name="hitung-luas" class="btn-hitung-luas">Hitung</button>
+              <button name="reset-luas" class="btn-reset-luas">Reset</button>
+            </form>
           </div>
           <div class="output_luas">
             <p>Hasil luas persegi tersebut:</p>
-            <p class="hasil-luas"></p>
+            <p class="hasil-luas">hasil</p>
           </div>
         </div>
       </div>
@@ -68,7 +74,7 @@
         <div class="container">
           <div class="description">
             <h3 class="formula-title">Keliling Persegi</h3>
-            <p>Rumus Keliling Persegi yaitu:</p>
+            <p>Rumus keliling persegi yaitu:</p>
             <ul>
               <li>K = S + S + S + S</li>
               <li>K = 4 x S</li>
@@ -79,25 +85,35 @@
               <li>S = Sisi</li>
             </ul>
           </div>
-          <img src="./images/keliling-persegi.png" class="image-persegi" alt="gambar-keliling-persegi" />
+          <img src="./images/keliling-persegi.png" class="image-persegi" alt="Gambar persegi" />
         </div>
         <span></span>
         <div class="operation">
           <div class="user-input">
             <h3>Hitung Keliling Persegi</h3>
 
-            <input name="sisi-keliling" id="input-sisi-keliling" autocomplete="off" placeholder="Masukkan angka sisi" required />
-            <button name="hitung-keliling" class="btn-hitung-keliling">Hitung</button>
-            <button name="reset-keliling" class="btn-reset-keliling">Reset</button>
+            <form action="#" class="form">
+              <div class="form-container-keliling">
+                <input name="sisi-keliling" id="input-sisi-keliling" autocomplete="off" placeholder="Masukkan angka sisi" required />
+                <i class="alert-circle-keliling" data-feather="alert-circle"></i>
+                <small class="small-keliling">Error Message</small>
+              </div>
+              <button name="hitung-keliling" class="btn-hitung-keliling">Hitung</button>
+              <button name="reset-keliling" class="btn-reset-keliling">Reset</button>
+            </form>
           </div>
           <div class="output_keliling">
             <p>Hasil keliling persegi tersebut:</p>
-            <p class="hasil-keliling"></p>
+            <p class="hasil-keliling">hasil</p>
           </div>
         </div>
       </div>
     </main>
-    <footer>&nbsp; Dibuat oleh Alfi Artya Diwanda | <a href="https://revou.co/" target="_blank">RevoU</a> Mini Project - May 2023</footer>
+    <footer>Dibuat oleh Alfi Artya Diwanda | <a href="https://revou.co/" target="_blank">RevoU</a> Mini Project - May 2023</footer>
+
+    <script>
+      feather.replace();
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

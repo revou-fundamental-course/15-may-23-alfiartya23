@@ -11,13 +11,9 @@
 }
 
 body {
-  /* background-color: violet; */
   width: 840px;
-  height: max-content;
   margin: 0 auto;
   padding: 20px;
-  /* background-color: #eaeaea; */
-  /* border: 1px solid black; */
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
@@ -54,6 +50,10 @@ header p {
   font-size: 0.9rem;
 }
 
+.dropdown-menu select {
+  border: 1px solid #333;
+}
+
 /* Luas Persegi */
 .luas-persegi {
   display: flex;
@@ -65,7 +65,7 @@ header p {
 .luas-persegi span {
   height: auto;
   width: 1.2px;
-  margin: 0 24px;
+  margin: 0 20px;
   background-color: #e5e5e5;
 }
 
@@ -73,7 +73,6 @@ header p {
   display: flex;
   flex-direction: row;
   width: 55%;
-  /* gap: 24px; */
   justify-content: space-between;
 }
 
@@ -95,7 +94,7 @@ header p {
 }
 
 .list-menu {
-  padding: 6px 12px;
+  padding: 8px 16px;
 }
 
 .btn-hitung-luas {
@@ -103,12 +102,10 @@ header p {
 }
 
 .operation {
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 45%;
-  /* background-color: aquamarine; */
 }
 
 .user-input {
@@ -117,19 +114,50 @@ header p {
   gap: 10px;
 }
 
-#input-sisi-luas {
-  border: 1px solid #252525;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-container #input-sisi-luas {
+  border: 2px solid #404040;
   width: 100%;
   border-radius: 4px;
   padding: 12px 24px;
 }
 
+.form-container.error #input-sisi-luas {
+  border-color: red;
+}
+
+.form-container .alert-circle {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  visibility: hidden;
+}
+
+.form-container.error .alert-circle {
+  visibility: visible;
+  color: red;
+}
+
+.form-container small {
+  visibility: hidden;
+  color: red;
+}
+
+.form-container.error small {
+  visibility: visible;
+}
+
 #input-sisi-luas:focus {
-  border: 1px solid #7c44e3;
-  /* outline: none; */
+  border-color: #7c44e3;
 }
 
 .btn-hitung-luas {
+  width: 100%;
   cursor: pointer;
   padding: 8px 24px;
   border-radius: 4px;
@@ -137,9 +165,16 @@ header p {
   color: #fff;
   font-size: 1rem;
   border: none;
+  margin-top: 8px;
+}
+
+.btn-hitung-luas:hover {
+  background-color: rgb(151, 101, 245);
 }
 
 .btn-reset-luas {
+  margin-top: 8px;
+  width: 100%;
   cursor: pointer;
   padding: 8px 24px;
   border-radius: 4px;
@@ -147,6 +182,14 @@ header p {
   color: #fff;
   font-size: 1rem;
   border: none;
+}
+
+.btn-reset-luas:hover {
+  background-color: rgb(242, 77, 107);
+}
+
+.btn-reset-luas:active {
+  background-color: rgb(219, 55, 85);
 }
 
 .output_luas {
@@ -158,7 +201,7 @@ header p {
   font-weight: 700;
 }
 
-/* Keliling Persegi */
+/* --------- Keliling Persegi --------- */
 .keliling-persegi {
   display: none;
   flex-direction: row;
@@ -169,23 +212,54 @@ header p {
 .keliling-persegi span {
   height: auto;
   width: 1.2px;
-  margin: 0 24px;
+  margin: 0 20px;
   background-color: #e5e5e5;
 }
 
-#input-sisi-keliling {
-  border: 1px solid #252525;
+.form-container-keliling {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-container-keliling #input-sisi-keliling {
+  border: 2px solid #404040;
   width: 100%;
   border-radius: 4px;
   padding: 12px 24px;
 }
 
+.form-container-keliling.error-keliling #input-sisi-keliling {
+  border-color: red;
+}
+
 #input-sisi-keliling:focus {
-  border: 1px solid #7c44e3;
-  outline: none;
+  border-color: #7c44e3;
+}
+
+.form-container-keliling .alert-circle-keliling {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  visibility: hidden;
+}
+
+.form-container-keliling.error-keliling .alert-circle-keliling {
+  visibility: visible;
+  color: red;
+}
+
+.form-container-keliling .small-keliling {
+  visibility: hidden;
+  color: red;
+}
+
+.form-container-keliling.error-keliling .small-keliling {
+  visibility: visible;
 }
 
 .btn-hitung-keliling {
+  width: 100%;
   cursor: pointer;
   padding: 8px 24px;
   border-radius: 4px;
@@ -193,9 +267,20 @@ header p {
   color: #fff;
   font-size: 1rem;
   border: none;
+  margin-top: 8px;
+}
+
+.btn-hitung-keliling:hover {
+  background-color: rgb(151, 101, 245);
+}
+
+.btn-hitung-keliling:active {
+  background-color: rgb(127, 78, 220);
 }
 
 .btn-reset-keliling {
+  margin-top: 8px;
+  width: 100%;
   cursor: pointer;
   padding: 8px 24px;
   border-radius: 4px;
@@ -203,6 +288,14 @@ header p {
   color: #fff;
   font-size: 1rem;
   border: none;
+}
+
+.btn-reset-keliling:hover {
+  background-color: rgb(242, 77, 107);
+}
+
+.btn-reset-keliling:active {
+  background-color: rgb(219, 55, 85);
 }
 
 .output_keliling {
@@ -268,7 +361,7 @@ footer {
   .luas-persegi span {
     height: 0.8px;
     width: auto;
-    margin: 24px 0;
+    margin: 20px 0;
     background-color: #e5e5e5;
   }
 
@@ -312,6 +405,7 @@ footer {
     width: 360px;
     margin: 0 auto;
     padding: 20px;
+    box-shadow: none;
   }
 
   header p {
@@ -330,10 +424,6 @@ footer {
 
   .description {
     line-height: 20px;
-  }
-
-  .user-input {
-    text-align: center;
   }
 
   .image-persegi {
