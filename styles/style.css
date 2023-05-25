@@ -340,6 +340,14 @@ footer {
     margin: 0 auto;
     padding: 20px;
   }
+
+  .form-container-luas .alert-circle {
+    left: 68%;
+  }
+
+  .form-container-keliling .alert-circle-keliling {
+    left: 68%;
+  }
 }
 
 /* When the maximum width is 768px and below will applied this rule*/
@@ -391,6 +399,14 @@ footer {
     width: 100%;
   }
 
+  .form-container-luas .alert-circle {
+    left: 82%;
+  }
+
+  .form-container-keliling .alert-circle-keliling {
+    left: 82%;
+  }
+
   .keliling-persegi {
     flex-direction: column;
     padding: 20px;
@@ -413,11 +429,19 @@ footer {
     margin: 0 auto;
     padding: 20px;
   }
+
+  .form-container-luas .alert-circle {
+    left: 75%;
+  }
+
+  .form-container-keliling .alert-circle-keliling {
+    left: 75%;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
   body {
     width: 360px;
@@ -446,5 +470,13 @@ footer {
 
   .image-persegi {
     margin: 0 auto;
+  }
+
+  .form-container-luas .alert-circle {
+    left: 64%;
+  }
+
+  .form-container-keliling .alert-circle-keliling {
+    left: 64%;
   }
 }
