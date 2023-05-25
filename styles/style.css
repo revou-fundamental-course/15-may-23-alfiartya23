@@ -11,6 +11,7 @@
 }
 
 body {
+  color: #333;
   width: 840px;
   margin: 0 auto;
   padding: 20px;
@@ -52,6 +53,7 @@ header p {
 
 .dropdown-menu select {
   border: 1px solid #333;
+  background: #efefef;
 }
 
 /* Luas Persegi */
@@ -120,11 +122,25 @@ header p {
   position: relative;
 }
 
+.form-container-luas div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-direction: row;
+}
+
 .form-container-luas #input-sisi-luas {
-  border: 2px solid #404040;
+  border: 1px solid #333;
   width: 100%;
   border-radius: 4px;
   padding: 12px 24px;
+}
+
+.form-container-luas div .length-measurement-luas {
+  border: 1px solid #333;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #efefef;
 }
 
 .form-container-luas.error-luas #input-sisi-luas {
@@ -133,7 +149,7 @@ header p {
 
 .form-container-luas .alert-circle {
   position: absolute;
-  right: 12px;
+  left: 240px;
   top: 10px;
   visibility: hidden;
 }
@@ -188,10 +204,6 @@ header p {
   background-color: rgb(242, 77, 107);
 }
 
-.btn-reset-luas:active {
-  background-color: rgb(219, 55, 85);
-}
-
 .output_luas {
   visibility: hidden;
 }
@@ -222,8 +234,22 @@ header p {
   position: relative;
 }
 
+.form-container-keliling div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.form-container-keliling div .length-measurement-keliling {
+  border: 1px solid #333;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #efefef;
+}
+
 .form-container-keliling #input-sisi-keliling {
-  border: 2px solid #404040;
+  border: 1px solid #404040;
   width: 100%;
   border-radius: 4px;
   padding: 12px 24px;
@@ -239,7 +265,7 @@ header p {
 
 .form-container-keliling .alert-circle-keliling {
   position: absolute;
-  right: 12px;
+  left: 240px;
   top: 10px;
   visibility: hidden;
 }
@@ -274,10 +300,6 @@ header p {
   background-color: rgb(151, 101, 245);
 }
 
-.btn-hitung-keliling:active {
-  background-color: rgb(127, 78, 220);
-}
-
 .btn-reset-keliling {
   margin-top: 8px;
   width: 100%;
@@ -292,10 +314,6 @@ header p {
 
 .btn-reset-keliling:hover {
   background-color: rgb(242, 77, 107);
-}
-
-.btn-reset-keliling:active {
-  background-color: rgb(219, 55, 85);
 }
 
 .output_keliling {
