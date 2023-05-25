@@ -24,45 +24,81 @@ selectOption.addEventListener("change", function () {
 });
 
 // Handling Hitung Luas button
-btnHitungLuas.addEventListener("click", function () {
+btnHitungLuas.addEventListener("click", function (event) {
+  event.preventDefault();
+
   // Check if input is empty
   if (inputNumberLuas.value === "") {
-    alert("Input angka dulu ya");
+    // Validation if input is empty
+    const formContainer = document.querySelector(".form-container");
+    formContainer.classList.add("error");
+
+    const smallMessage = document.querySelector("small");
+    smallMessage.textContent = "Input tidak boleh kosong";
+  } else if (!/^[0-9]+$/.test(inputNumberLuas.value)) {
+    // Validation if input is not a number
+    const formContainer = document.querySelector(".form-container");
+    formContainer.classList.add("error");
+
+    const smallMessage = document.querySelector("small");
+    smallMessage.innerText = "Hanya menerima angka!";
+    document.querySelector(".output_luas").style.visibility = "hidden";
   } else {
+    document.querySelector(".form-container").classList.remove("error");
     const sisiPersegi = Number(inputNumberLuas.value);
 
     // Formula Luas
     const result = sisiPersegi * sisiPersegi;
 
     document.querySelector(".output_luas").style.visibility = "visible";
-    document.querySelector(".hasil-luas").textContent = `L = ${result}`;
+    document.querySelector(".hasil-luas").innerHTML = `Luas = ${result} cm<sup>2</sup>`;
   }
 });
 
 // Handling Hitung Keliling button
-btnHitungKeliling.addEventListener("click", function () {
+btnHitungKeliling.addEventListener("click", function (event) {
+  event.preventDefault();
+
   // Check if input is empty
   if (inputNumberKeliling.value === "") {
-    alert("Input angka dulu ya");
+    // Validation if input is empty
+    const formContainer = document.querySelector(".form-container-keliling");
+    formContainer.classList.add("error-keliling");
+
+    const smallMessage = document.querySelector(".small-keliling");
+    smallMessage.textContent = "Input tidak boleh kosong";
+  } else if (!/^[0-9]+$/.test(inputNumberKeliling.value)) {
+    // Validation if input is not a number
+    const formContainer = document.querySelector(".form-container-keliling");
+    formContainer.classList.add("error-keliling");
+
+    const smallMessage = document.querySelector(".small-keliling");
+    smallMessage.innerText = "Hanya menerima angka!";
+    document.querySelector(".output_keliling").style.visibility = "hidden";
   } else {
+    document.querySelector(".form-container-keliling").classList.remove("error-keliling");
     const sisiPersegi = Number(inputNumberKeliling.value);
 
-    // Formula Keliling
+    // Formula Luas
     const result = 4 * sisiPersegi;
 
     document.querySelector(".output_keliling").style.visibility = "visible";
-    document.querySelector(".hasil-keliling").textContent = `K = ${result}`;
+    document.querySelector(".hasil-keliling").textContent = `Keliling = ${result} cm`;
   }
 });
 
 // Handling Reset Button Luas Persegi
-btnResetLuas.addEventListener("click", function () {
+btnResetLuas.addEventListener("click", function (event) {
+  event.preventDefault();
   inputNumberLuas.value = "";
   document.querySelector(".output_luas").style.visibility = "hidden";
+  document.querySelector(".form-container").classList.remove("error");
 });
 
 // Handling Reset Button Luas Persegi
-btnResetKeliling.addEventListener("click", function () {
+btnResetKeliling.addEventListener("click", function (event) {
+  event.preventDefault();
   inputNumberKeliling.value = "";
   document.querySelector(".output_keliling").style.visibility = "hidden";
+  document.querySelector(".form-container-keliling").classList.remove("error-keliling");
 });
