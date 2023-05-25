@@ -10,6 +10,8 @@ const btnHitungKeliling = document.querySelector(".btn-hitung-keliling");
 const btnResetLuas = document.querySelector(".btn-reset-luas");
 const btnResetKeliling = document.querySelector(".btn-reset-keliling");
 const selectOption = document.querySelector(".list-menu");
+const optionLengthLuas = document.querySelector(".length-measurement-luas");
+const optionLengthKeliling = document.querySelector(".length-measurement-keliling");
 
 // Regex pattern for only accept number
 const patternNumber = new RegExp(/^[0-9]+$/);
@@ -26,6 +28,17 @@ const showError = function (formTag, errorClass, message) {
   formTag.classList.add(errorClass);
   const small = formTag.querySelector("small");
   small.innerText = message;
+};
+
+// Function display output luas with length measure
+const showOutputLuas = function (outputClass, resultLuas, measure) {
+  document.querySelector(outputClass).style.visibility = "visible";
+  document.querySelector(".hasil-luas").innerHTML = `Luas = ${resultLuas} ${measure}<sup>2</sup>`;
+};
+
+const showOutputKeliling = function (outputClass, resultKeliling, measure) {
+  document.querySelector(outputClass).style.visibility = "visible";
+  document.querySelector(".hasil-keliling").innerHTML = `Keliling = ${resultKeliling} ${measure}`;
 };
 
 // Select dropdown value
@@ -50,7 +63,7 @@ btnHitungLuas.addEventListener("click", function (event) {
   // Check if input is empty
   if (inputNumberLuas.value === "") {
     // Validation if input is empty
-    showError(formLuas, "error-luas", "Input tidak boleh kosong");
+    showError(formLuas, "error-luas", "Input tidak boleh kosong!");
   } else if (!patternNumber.test(inputNumberLuas.value)) {
     // Validation if input is not a number
     showError(formLuas, "error-luas", "Hanya menerima angka!");
@@ -58,16 +71,30 @@ btnHitungLuas.addEventListener("click", function (event) {
     // Hide the output
     document.querySelector(".output_luas").style.visibility = "hidden";
   } else {
-    // Remove error class when showing the result
-    formLuas.classList.remove("error-luas");
+    // Condition for length measurement centimeter and meter
+    const lengthMeasure = optionLengthLuas.value;
 
-    // Formula Luas
-    const sisiPersegi = Number(inputNumberLuas.value);
-    const result = sisiPersegi * sisiPersegi;
+    if (lengthMeasure === "cm") {
+      // Remove error class when showing the result
+      formLuas.classList.remove("error-luas");
 
-    // Showing the result keliling persegi
-    document.querySelector(".output_luas").style.visibility = "visible";
-    document.querySelector(".hasil-luas").innerHTML = `Luas = ${result} cm<sup>2</sup>`;
+      // Formula Luas
+      const sisiPersegi = Number(inputNumberLuas.value);
+      const result = sisiPersegi * sisiPersegi;
+
+      // Showing the result keliling persegi
+      showOutputLuas(".output_luas", result, lengthMeasure);
+    } else {
+      // Remove error class when showing the result
+      formLuas.classList.remove("error-luas");
+
+      // Formula Luas
+      const sisiPersegi = Number(inputNumberLuas.value);
+      const result = sisiPersegi * sisiPersegi;
+
+      // Showing the result luas persegi
+      showOutputLuas(".output_luas", result, lengthMeasure);
+    }
   }
 });
 
@@ -79,7 +106,7 @@ btnHitungKeliling.addEventListener("click", function (event) {
   // Check if input is empty
   if (inputNumberKeliling.value === "") {
     // Validation if input is empty
-    showError(formKeliling, "error-keliling", "Input tidak boleh kosong");
+    showError(formKeliling, "error-keliling", "Input tidak boleh kosong!");
   } else if (!patternNumber.test(inputNumberKeliling.value)) {
     // Validation if input is not a number
     showError(formKeliling, "error-keliling", "Hanya menerima angka!");
@@ -87,16 +114,30 @@ btnHitungKeliling.addEventListener("click", function (event) {
     // Hide the output
     document.querySelector(".output_keliling").style.visibility = "hidden";
   } else {
-    // Remove error class when showing the result
-    formKeliling.classList.remove("error-keliling");
+    // Condition for length measurement centimeter and meter
+    const lengthMeasure = optionLengthKeliling.value;
 
-    // Formula Keliling
-    const sisiPersegi = Number(inputNumberKeliling.value);
-    const result = 4 * sisiPersegi;
+    if (lengthMeasure === "cm") {
+      // Remove error class when showing the result
+      formKeliling.classList.remove("error-keliling");
 
-    // Showing the result keliling persegi
-    document.querySelector(".output_keliling").style.visibility = "visible";
-    document.querySelector(".hasil-keliling").textContent = `Keliling = ${result} cm`;
+      // Formula Keliling
+      const sisiPersegi = Number(inputNumberKeliling.value);
+      const result = 4 * sisiPersegi;
+
+      // Showing the result keliling persegi
+      showOutputKeliling(".output_keliling", result, lengthMeasure);
+    } else {
+      // Remove error class when showing the result
+      formKeliling.classList.remove("error-keliling");
+
+      // Formula Keliling
+      const sisiPersegi = Number(inputNumberKeliling.value);
+      const result = 4 * sisiPersegi;
+
+      // Showing the result keliling persegi
+      showOutputKeliling(".output_keliling", result, lengthMeasure);
+    }
   }
 });
 
@@ -115,3 +156,5 @@ btnResetKeliling.addEventListener("click", function (event) {
   // Calling the clearUI function for reset button in Keliling Persegi
   clearUI(inputNumberKeliling, formKeliling, ".output_keliling", "error-keliling");
 });
+
+cosnt;
