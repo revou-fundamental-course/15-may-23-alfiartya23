@@ -3,3 +3,20 @@
 # autograder-v2
 
 New version of autograder
+
+## RevoU Mini Coding Project - May 2023
+
+This calculator app was made for my submission project in RevoU Mini Course (15 May 2023).
+
+Built with:
+
+- HTML
+- CSS
+- JavaScript
+
+## Screeshoot
+
+Screnshoot Project Link:
+https://drive.google.com/drive/folders/1mxRjKoZoWW-LdwC8H0q19Gm4SGfyr3ui?usp=sharing
+
+Thank you! 🙌
